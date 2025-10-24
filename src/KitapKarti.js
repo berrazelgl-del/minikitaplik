@@ -14,7 +14,7 @@ function KitapKarti({ id, baslik, yazar, kategori, favoriler, setFavoriler }) {
   return (
     <div
       style={{
-        backgroundColor: "#f9f0ff",
+        backgroundColor: "#FFE082",
         borderRadius: "12px",
         padding: "12px",
         marginBottom: "10px",
@@ -22,7 +22,7 @@ function KitapKarti({ id, baslik, yazar, kategori, favoriler, setFavoriler }) {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        color: "#008080",
+        color: "#3E3E3E",
       }}
     >
       <div>
@@ -34,16 +34,16 @@ function KitapKarti({ id, baslik, yazar, kategori, favoriler, setFavoriler }) {
       <button
         onClick={toggleFavori}
         style={{
-          backgroundColor: favoriMi ? "#b2dfdb" : "#d9f6f4",
+          backgroundColor: favoriMi ? "#FFB74D" : "#FFE082",
           border: "none",
           borderRadius: "8px",
           padding: "6px 12px",
           cursor: "pointer",
-          color: "#008080",
+          color: "#3E3E3E",
           fontWeight: "bold",
         }}
       >
-        {favoriMi ? "★ Favoride" : "☆ Favori Ekle"}
+        {favoriMi ? "★ Favoride" : "☆ Ekle"}
       </button>
     </div>
   );

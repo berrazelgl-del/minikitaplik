@@ -1,28 +1,22 @@
 import React from "react";
 
-function FavoriPaneli({ favoriler, setFavoriler }) {
-  const kitapBilgileri = [
-    { id: 1, baslik: "React'e Giriş" },
-    { id: 2, baslik: "İleri JavaScript" },
-    { id: 3, baslik: "Veri Yapıları" },
-    { id: 4, baslik: "Algoritmalar" },
-    { id: 5, baslik: "UI/UX Temelleri" },
-  ];
-
-  const favoriKitaplar = kitapBilgileri.filter((k) => favoriler.includes(k.id));
+function FavoriPaneli({ kitaplar, favoriler, setFavoriler }) {
+  const favoriKitaplar = kitaplar.filter((k) => favoriler.includes(k.id));
 
   return (
     <div
       style={{
         width: "35%",
-        backgroundColor: "#f5e6ff",
+        backgroundColor: "#FFF3B0",
         padding: "15px",
         borderRadius: "12px",
-        boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-        color: "#008080",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+        color: "#3E3E3E",
       }}
     >
-      <h3 style={{ textAlign: "center" }}>💙 Favoriler ({favoriler.length})</h3>
+      <h3 style={{ textAlign: "center", color: "#FF6F00" }}>
+        💛 Favoriler ({favoriler.length})
+      </h3>
       {favoriKitaplar.length === 0 ? (
         <p style={{ textAlign: "center" }}>Henüz favori kitap yok.</p>
       ) : (
@@ -30,7 +24,7 @@ function FavoriPaneli({ favoriler, setFavoriler }) {
           <div
             key={k.id}
             style={{
-              backgroundColor: "#fff",
+              backgroundColor: "#FFF8E1",
               padding: "8px",
               borderRadius: "8px",
               marginBottom: "8px",
@@ -43,12 +37,13 @@ function FavoriPaneli({ favoriler, setFavoriler }) {
               onClick={() => setFavoriler(favoriler.filter((f) => f !== k.id))}
               style={{
                 marginLeft: "10px",
-                backgroundColor: "#b2dfdb",
+                backgroundColor: "#FFD54F",
                 border: "none",
                 borderRadius: "6px",
                 padding: "4px 8px",
                 cursor: "pointer",
-                color: "#008080",
+                color: "#3E3E3E",
+                fontWeight: "bold",
               }}
             >
               Kaldır

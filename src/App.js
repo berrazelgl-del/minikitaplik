@@ -21,13 +21,13 @@ function App() {
     { id: 5, baslik: "UI/UX Temelleri", yazar: "N. Akın", kategori: "Tasarım" },
   ];
 
-
   const filtreliKitaplar = kitaplar.filter(
     (k) =>
       (kategori === "Tümü" || k.kategori === kategori) &&
       k.baslik.toLowerCase().includes(aramaMetni.toLowerCase())
   );
 
+  // LocalStorage güncelle
   useEffect(() => {
     localStorage.setItem("aramaMetni", aramaMetni);
     localStorage.setItem("favoriler", JSON.stringify(favoriler));
@@ -37,13 +37,13 @@ function App() {
     <div
       style={{
         minHeight: "100vh",
-        backgroundColor: "#e6ccff",
+        background: "linear-gradient(to bottom, #FFF3B0, #FF5733)",
         padding: "20px",
         fontFamily: "'Comic Sans MS', cursive, sans-serif",
-        color: "#008080",
+        color: "#3E3E3E",
       }}
     >
-      <h1 style={{ textAlign: "center" }}>📚 Mini Kitaplık</h1>
+      <h1 style={{ textAlign: "center", color: "#FF6F00" }}>📚 Mini Kitaplık</h1>
 
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
         <AramaCubugu aramaMetni={aramaMetni} setAramaMetni={setAramaMetni} />

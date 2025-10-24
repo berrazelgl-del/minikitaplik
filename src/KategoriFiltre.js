@@ -8,9 +8,10 @@ function KategoriFiltre({ kategori, setKategori }) {
       style={{
         padding: "10px",
         borderRadius: "10px",
-        border: "1px solid #008080",
-        backgroundColor: "#f5e6ff",
-        color: "#008080",
+        border: "1px solid #FF6F00",
+        backgroundColor: "#FFF8E1",
+        color: "#3E3E3E",
+        fontWeight: "bold",
       }}
     >
       <option value="Tümü">Tümü</option>

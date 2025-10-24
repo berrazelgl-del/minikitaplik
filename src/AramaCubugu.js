@@ -9,13 +9,13 @@ function AramaCubugu({ aramaMetni, setAramaMetni }) {
       onChange={(e) => setAramaMetni(e.target.value)}
       style={{
         padding: "10px",
-        
         borderRadius: "10px",
-        border: "1px solid #008080",
+        border: "1px solid #FF6F00",
         outline: "none",
         width: "200px",
         marginRight: "10px",
-        color: "#008080",
+        color: "#3E3E3E",
+        backgroundColor: "#FFF8E1",
       }}
     />
   );
